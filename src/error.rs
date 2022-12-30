@@ -77,3 +77,6 @@ impl From<crate::ssl::Error> for Error {
         Self::SslError(e)
     }
 }
+
+#[cfg(feature = "std")]
+impl std::error::Error for Error {}
